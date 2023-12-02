@@ -28,11 +28,9 @@ for content_val in content[0:]:
     green_balls = [int(i) for i in green_balls]
     blue_balls = [int(i) for i in blue_balls]
     # If max each balls is more than their respective max values, then skip the line
-    if (
-        max(red_balls) > max_red
-        or max(green_balls) > max_green
-        or max(blue_balls) > max_blue
-    ):
+    if max(red_balls) > max_red or \
+       max(green_balls) > max_green or \
+       max(blue_balls) > max_blue:
         continue
     else:
         game_dict[game_id_val] = [red_balls[0], green_balls[0], blue_balls[0]]
