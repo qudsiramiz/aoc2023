@@ -5,7 +5,7 @@ max_green = 13
 max_blue = 14
 
 # Read the input file
-with open("input.txt") as f:
+with open("../data/20231202_input.txt") as f:
     content = f.readlines()
 
 # Remove whitespace characters like `\n` at the end of each line

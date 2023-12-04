@@ -3,7 +3,7 @@ import re
 import matplotlib.pyplot as plt
 
 # Read the input.txt file contents in a list
-with open("input.txt") as f:
+with open("../data/20231201_input.txt") as f:
     content = f.readlines()
 
 # Get rid of the \n at the end of each line

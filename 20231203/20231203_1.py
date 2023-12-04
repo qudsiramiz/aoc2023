@@ -1,5 +1,5 @@
 # Read the input file
-with open("input.txt") as f:
+with open("../data/20231203_input.txt") as f:
     content = f.readlines()
 
 # Remove whitespace characters like `\n` at the end of each line
