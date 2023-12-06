@@ -34,4 +34,4 @@ print(get_equation_value(x_plus))
 print(get_equation_value(x_minus))
 
 # Find the difference between the two values
-print(int(x_plus - x_minus))
+print(int(x_plus - x_minus) + 1)
