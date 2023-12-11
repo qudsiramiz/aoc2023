@@ -22,11 +22,11 @@ for i in range(len(data)):
 first_col = np.array(first_col[1:])
 
 destination = "ZZZ"
-dest = "AAA"
+dest = "VPA"
 count = 0
 count2 = 0
-ind_aaa = np.where(first_col == "AAA")[0][0] + 1
-while dest != destination:
+ind_aaa = np.where(first_col == dest)[0][0] + 1
+while dest[-1] != "Z":
     count2 = 0
     for i, instructions in enumerate(instruction_list, start=ind_aaa):
         count2 += 1
@@ -34,7 +34,7 @@ while dest != destination:
         #     break
         if i == 0 and count == 0:
             dest = data[i + 1][0:3]
-            print(i, dest, count2)
+            # print(i, dest, count2)
             if dest != destination:
                 if instructions == "R":
                     dest = data[i + 1][12:15]
@@ -51,7 +51,7 @@ while dest != destination:
         else:
             j = np.where(first_col == dest)[0][0] + 1
             dest = data[j][0:3]
-            print(instructions, dest, i, j, count2)
+            # print(instructions, dest, i, j, count2)
             if dest != destination:
                 if instructions == "R":
                     dest = data[j][12:15]
@@ -64,6 +64,6 @@ while dest != destination:
                         print(f"It took {i + 1} steps to get to {destination}")
                         break
     count += 1
-    print(dest, count)
+    # print(dest, count)
 
 print((count - 1) * len(instruction_list) + i - (ind_aaa - 1))
